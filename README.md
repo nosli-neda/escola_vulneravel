@@ -4,3 +4,6 @@ Não sou programador, por isso não se apeguem às lógicas das criações das p
 
 Criei utilizando XAMPP.
 Basta importar o arquivo escola_vulneravel.sql para o MySQL que o banco de dados será criado.
+
+ - Melhorias criadas no código, como Funções para Validar Professor vs Aluno.
+ - Criada a página da secretaria para simular IDOR.
