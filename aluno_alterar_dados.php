@@ -1,11 +1,13 @@
 <?php
-session_start();
-include('db.php');
+//session_start();
 
-// Verifica se o usuário está logado e se o cookie de sessão é válido
-if (!isset($_SESSION['loggedin']) || !$_SESSION['loggedin'] || !isset($_COOKIE['session_id']) || $_COOKIE['session_id'] !== session_id()) {
-    // Redireciona para a página de login se a sessão não for válida
-    header("Location: login.php");
+include('db.php');
+require_once 'functions.php';
+
+if (validarSessao("aluno") == false)
+{
+    //Redireciona para a página de login se a sessão não for válida
+    header("Location: aluno_login.php");
     exit();
 }
 

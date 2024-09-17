@@ -10,36 +10,42 @@ require_once 'functions.php';
     //header("Location: professor_login.php");
     //exit();
 //}
-if (validarSessao("aluno") == false)
+if (validarSessao("aluno"))
 {
     //Redireciona para a página de login se a sessão não for válida
     header("Location: professor_login.php");
     exit();
 }
 
-// Obtém os dados do aluno logado
+// Obtém os dados do professor logado
 $email = $_SESSION['email'];
-//$alunoid = $_GET["alunoid"];
-$query = "SELECT * FROM dados_aluno WHERE email = '$email'";
-//$query = "SELECT * FROM dados_aluno WHERE id = '$alunoid'";
+$query = "SELECT * FROM dados_professor WHERE email = '$email'";
+
 $result = $conn->query($query);
 
 if ($result->num_rows > 0) {
-    $aluno = $result->fetch_assoc();
+    $professor = $result->fetch_assoc();
 
 } else {
-    echo "Aluno não encontrado.";
+    echo "Professor não encontrado.";
     exit();
 }
 
+
 ?>
 
+<!-- Monta o HTML do Formulario -->
 <html>
     <body>
-        <h1>Bem vindo ao Painel Principal</h1>
+        <h1>Painel Principal</h1><br>
+        <h2><?php echo "Bem vindo(a), Prof. " . $professor['nome_completo']; ?></h2>
         <h3>Escolha uma das opções baixo:<h3>
-            <a href="aluno_ver_materias.php?alunoid=<?php echo $aluno['id']; ?>">Ver Materias (Faltas e Notas)</a>
+            <a href="professor_ver_notas.php">Ver Materias (Faltas e Notas)</a>
             <br>
-            <a href="aluno_dashboard.php?alunoid=<?php echo $aluno['id']; ?>"">Ver Perfil</a>
+            <a href="professor_inserir_notas.php">Inserir Materias (Faltas e Notas)</a>
+            <br>
+            <a href="forum.php">Mensagens</a>
+            <br>
+            <a href="logout.php">Logout</a>
     </body>
 </html>

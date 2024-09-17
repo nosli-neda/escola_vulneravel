@@ -1,6 +1,8 @@
 <?php
-session_start();
+
 include('db.php'); // Inclua o arquivo de configuração do banco de dados
+
+require_once 'functions.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Captura os dados do formulário
@@ -14,10 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Verifica se a combinação e-mail/senha foi encontrada
     if ($result->num_rows > 0) {
         // Cria uma sessão e armazena o e-mail
-        $_SESSION['email'] = $email;
-        $_SESSION['loggedin'] = true;
-        setcookie('session_id', session_id(), time() + 3600, "/"); // Define um cookie com a sessão
-
+        criarSessao($email, false);
         // Redireciona para a página de dashboard ou outra página protegida
         $id = $aluno["id"];
         header("Location: aluno_painel.php?alunoid=$id");

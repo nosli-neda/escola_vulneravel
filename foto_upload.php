@@ -1,10 +1,12 @@
 <?php
-session_start();
-include('db.php');
+//session_start();
 
-// Verifica se o usuário está logado e se o cookie de sessão é válido
-if (!isset($_SESSION['loggedin']) || !$_SESSION['loggedin'] || !isset($_COOKIE['session_id']) || $_COOKIE['session_id'] !== session_id()) {
-    // Redireciona para a página de login se a sessão não for válida
+include('db.php');
+require_once 'functions.php';
+
+if (validarSessao("aluno") == false)
+{
+    //Redireciona para a página de login se a sessão não for válida
     header("Location: aluno_login.php");
     exit();
 }
@@ -62,20 +64,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['foto'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Importa o arquivo validacao.js -->
+    <script src="validacao.js"></script>
     <title>Upload de Foto</title>
 </head>
 <body>
     <h1>Upload de Foto</h1>
     
-    <form method="POST" enctype="multipart/form-data">
+    <form method="POST" enctype="multipart/form-data" >
+    
         <label for="foto">Selecione uma foto:</label>
-        <input type="file" id="foto" name="foto" accept="image/jpeg" required><br><br>
-        <button type="submit">Enviar Foto</button>
+        <input type="file" id="foto" name="foto"  required><br><br>
+        <button type="submit" value="Upload">Enviar Foto</button>
     </form>
 
     <?php if ($foto_atual): ?>
         <h2>Foto Atual:</h2>
-        <img src="fotos/<?php echo htmlspecialchars($foto_atual); ?>" alt="Foto do Aluno" style="max-width: 200px;">
+        <img src="fotos/<?php echo $foto_atual; ?>" alt="Foto do Aluno" style="max-width: 200px;">
         <br>
     <?php endif; ?>
 

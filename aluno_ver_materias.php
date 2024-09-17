@@ -1,10 +1,13 @@
 <?php
-session_start();
-include('db.php');
+//session_start();
 
-// Verifica se o usuário está logado e se o cookie de sessão é válido
-if (!isset($_SESSION['loggedin']) || !$_SESSION['loggedin'] || !isset($_COOKIE['session_id']) || $_COOKIE['session_id'] !== session_id()) {
-    // Redireciona para a página de login se a sessão não for válida
+include('db.php');
+require_once 'functions.php';
+
+
+if (validarSessao("aluno") == false)
+{
+    //Redireciona para a página de login se a sessão não for válida
     header("Location: aluno_login.php");
     exit();
 }
@@ -19,11 +22,12 @@ $faltas[] = 0;
 // Obtém os dados do aluno logado
 $email = $_SESSION['email'];
 $aluno_id = $_GET["alunoid"];
-$query_aluno = "SELECT rgm FROM dados_aluno WHERE id = '$aluno_id'";
+$query_aluno = "SELECT * FROM dados_aluno WHERE id = '$aluno_id'";
 $alunos = $conn->query($query_aluno);
 if ($alunos->num_rows > 0) {
     $aluno = $alunos->fetch_assoc();
     $rgm = $aluno['rgm'];
+    $email = $aluno['email'];
     
 } else {
     echo "Aluno não encontrado.<br>";
@@ -50,7 +54,8 @@ if ($result->num_rows > 0)
     echo "</head>";
     echo "<body>";
     echo "<h1>Bem-vindo às suas Matérias.</h1>";
-    echo "<p><b>" . htmlspecialchars($_SESSION['email']) . "</b>, você poderá acompanhar suas notas e faltas pora aqui.</p>";
+    //echo "<p><b>" . htmlspecialchars($email) . "</b>, você poderá acompanhar suas notas e faltas pora aqui.</p>";
+    echo "<p><b>" . $email . "</b>, você poderá acompanhar suas notas e faltas pora aqui.</p>";
     echo "<h2>Seus dados são:</h2>";
     echo "<table border='1' align='left'>";
     echo "<tr>";
