@@ -1,6 +1,5 @@
 <?php
 //session_start();
-
 include('db.php');
 require_once 'functions.php';
 
@@ -33,7 +32,6 @@ if ($result->num_rows > 0) {
 // Verifica se o formulário foi enviado
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome_completo = $_POST['nome_completo'];
-    $serie = $_POST['serie'];
     $idade = $_POST['idade'];
     $endereco_rua = $_POST['endereco_rua'];
     $endereco_cep = $_POST['endereco_cep'];
@@ -46,7 +44,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Atualiza os dados do aluno
     $update_query = "UPDATE dados_aluno SET
         nome_completo = '$nome_completo',
-        serie = '$serie',
         idade = '$idade',
         endereco_rua = '$endereco_rua',
         endereco_cep = '$endereco_cep',
@@ -57,9 +54,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         nome_mae = '$nome_mae'
         WHERE id = '$id'";
     $conn->query($update_query);
-
     // Redireciona de volta para o dashboard
-    header("Location: dashboard.php");
+    echo "Dados atualizados com sucesso.";
+    header( "Refresh:5; aluno_dashboard.php?alunoid=$id", true, 303);
     exit();
 }
 ?>
@@ -77,9 +74,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <input type="hidden" name="id" value="<?php echo htmlspecialchars($aluno['id']); ?>">
         <label for="nome_completo">Nome Completo:</label>
         <input type="text" id="nome_completo" name="nome_completo" value="<?php echo htmlspecialchars($aluno['nome_completo']); ?>" required><br><br>
+        <label for="nome_completo">Nome da Mãe:</label>
+        <input type="text" id="nome_mae" name="nome_mae" value="<?php echo $aluno['nome_mae']; ?>" required><br><br>
+        <label for="nome_completo">Nome do Pai:</label>
+        <input type="text" id="nome_pai" name="nome_pai" value="<?php echo htmlspecialchars($aluno['nome_pai']); ?>" required><br><br>
         <label for="serie">Série:</label>
-        <input type="text" id="serie" name="serie" value="<?php echo htmlspecialchars($aluno['serie']); ?>" required><br><br>
-        <label for="idade">Idade:</label>
+        
         <input type="number" id="idade" name="idade" value="<?php echo htmlspecialchars($aluno['idade']); ?>" required><br><br>
         <label for="endereco_rua">Rua:</label>
         <input type="text" id="endereco_rua" name="endereco_rua" value="<?php echo htmlspecialchars($aluno['endereco_rua']); ?>" required><br><br>
@@ -88,4 +88,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <label for="endereco_bairro">Bairro:</label>
         <input type="text" id="endereco_bairro" name="endereco_bairro" value="<?php echo htmlspecialchars($aluno['endereco_bairro']); ?>" required><br><br>
         <label for="endereco_cidade">Cidade:</label>
-        <input type="text" id="endereco_cidade" name="endereco_cidade" value
+        <input type="text" id="endereco_cidade" name="endereco_cidade" value="<?php echo $aluno['endereco_cidade']; ?>" required><br><br>
+        <label for="endereco_cidade">UF:</label>
+        <input type="text" id="endereco_estado" name="endereco_estado" value="<?php echo $aluno['endereco_estado']; ?>" required><br><br>
+        <input type="submit" value="Alterar Dados">
+
+</body>
+</html>
