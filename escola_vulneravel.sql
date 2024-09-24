@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 02/09/2024 às 20:48
+-- Tempo de geração: 23/09/2024 às 01:51
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -50,46 +50,81 @@ CREATE TABLE `dados_aluno` (
 --
 
 INSERT INTO `dados_aluno` (`id`, `nome_completo`, `serie`, `idade`, `endereco_rua`, `endereco_cep`, `endereco_bairro`, `endereco_cidade`, `endereco_estado`, `nome_pai`, `nome_mae`, `foto`, `rgm`, `email`, `senha`) VALUES
-(42, 'Lucas Almeida', '8a S?rie A', 17, 'Rua das Flores', '12345-678', 'Soho', 'Paris', 'SP', 'Vitor Miguel', 'Alana Helena', 'foto_aluno_1.jpg', 1, 'Lucas.Almeida@emailescola.com', 'abacaxi'),
-(43, 'Clara Mendes', '8a S?rie A', 16, 'Avenida Central', '98765-432', 'Harlem', 'Sydney', 'SP', 'Enzo Arthur', 'Rafaela Alice', NULL, 2, 'Clara.Mendes@emailescola.com', 'cachorro'),
-(44, 'Rafael Silva', '8a S?rie A', 17, 'Rua do Com?rcio', '54321-098', 'Ipanema', 'T?quio', 'SP', 'Cau? Gael', 'Vit?ria Laura', NULL, 3, 'Rafael.Silva@emailescola.com', 'livro'),
-(45, 'Helena Costa', '8a S?rie A', 17, 'Alameda dos Anjos', '11111-222', 'Montmartre', 'Roma', 'SP', 'Francisco Th?o', 'Isabelly Maria Alice', NULL, 4, 'Helena.Costa@emailescola.com', 'sereno'),
-(46, 'Bruno Carvalho', '8a S?rie A', 17, 'Avenida Paulista', '33333-444', 'Trastevere', 'Cairo', 'SP', 'Rael Heitor', 'Bella Sophia', NULL, 5, 'Bruno.Carvalho@emailescola.com', 'banana'),
-(47, 'Marina Oliveira', '8a S?rie A', 17, 'Rua do Sol', '55555-666', 'Chelsea', 'Nova York', 'SP', 'Jo?o Guilherme Ravi', 'Milena Manuela', NULL, 6, 'Marina.Oliveira@emailescola.com', 'estrela'),
-(48, 'Diego Ferreira', '8a S?rie A', 17, 'Rua Santa Clara', '77777-888', 'Leblon', 'Londres', 'SP', 'Thomas Davi', 'Clarice Mait?', NULL, 7, 'Diego.Ferreira@emailescola.com', 'solidez'),
-(49, 'Beatriz Santos', '8a Série A', 16, 'Avenida Atl?ntica', '99999-000', 'La Boca', 'Berlim', 'SP', 'Yuri Bernardo', 'Mirella Liz', NULL, 8, 'Beatriz.Santos@emailescola.com', 'amigo'),
-(50, 'Felipe Souza', '8a S?rie A', 17, 'Rua das Palmeiras', '10101-202', 'Copacabana', 'Dubai', 'SP', 'Yan Noah', 'Ana Cec?lia', NULL, 9, 'Felipe.Souza@emailescola.com', 'segredo'),
-(51, 'Amanda Pereira', '8a S?rie A', 17, 'Rua Nova', '30303-404', 'Notting Hill', 'Hong Kong', 'SP', 'Anthony Gabriel Gabr', 'Emilly Isabella', NULL, 10, 'Amanda.Pereira@emailescola.com', 'loucura'),
-(52, 'Daniel Ribeiro', '8a S?rie A', 17, 'Avenida Independ?ncia', '50505-606', 'Kreuzberg', 'Moscou', 'SP', 'Oliver Samuel', 'Betina Lu?sa', NULL, 11, 'Daniel.Ribeiro@emailescola.com', 'janela'),
-(53, 'Camila Lima', '8a S?rie A', 17, 'Rua da Paz', '70707-808', 'La D?fense', 'S?o Paulo', 'SP', 'Ot?vio Pedro', 'Mariah Elo?', NULL, 12, 'Camila.Lima@emailescola.com', 'peixe'),
-(54, 'Gustavo Rocha', '8a S?rie A', 17, 'Alameda dos Ip?s', '90909-010', 'Santa Teresa', 'Madri', 'SP', 'Jo?o Gabriel Anthony', 'Zoe Helo?sa', NULL, 13, 'Gustavo.Rocha@emailescola.com', 'brilho'),
-(55, 'J?lia Moreira', '8a S?rie A', 16, 'Rua das Ac?cias', '12121-314', 'Palermo', 'Istambul', 'SP', 'Nathan Isaac', 'Maria Vit?ria J?lia', NULL, 14, 'Julia.Moreira@emailescola.com', 'rosas'),
-(56, 'Marcelo Nogueira', '8a S?rie A', 17, 'Avenida das Na??es', '41414-515', 'Ginza', 'Bangcoc', 'SP', 'Davi Lucas Ben?cio', 'Nicole Ayla', NULL, 15, 'Marcelo.Nogueira@emailescola.com', 'luzes'),
-(57, 'Larissa Fernandes', '8a S?rie A', 17, 'Rua da Esperan?a', '61616-717', 'Vila Madalena', 'Buenos Aires', 'SP', 'Vin?cius Benjamin', 'La?s Maria Lu?sa', NULL, 16, 'Larissa.Fernandes@emailescola.com', 'primavera'),
-(58, 'Pedro Martins', '8a S?rie A', 17, 'Rua S?o Jo?o', '81818-919', 'Chueca', 'Seul', 'SP', 'Theodoro Matheus', 'Melina Isis', NULL, 17, 'Pedro.Martins@emailescola.com', 'casa'),
-(59, 'Gabriela Andrade', '8a S?rie A', 17, 'Avenida das Am?ricas', '21212-323', 'Greenwich Village', 'Toronto', 'SP', 'Valentim Lucas', 'Bianca Elisa', NULL, 18, 'Gabriela.Andrade@emailescola.com', 'vento'),
-(60, 'Thiago Batista', '8a S?rie A', 17, 'Rua do Carmo', '43434-545', 'Lapa', 'Lisboa', 'SP', 'Ryan Joaquim', 'Louise Antonella', NULL, 19, 'Thiago.Batista@emailescola.com', 'murilo'),
-(61, 'Isabela Teixeira', '8a S?rie A', 16, 'Alameda dos L?rios', '65656-767', 'Malasa?a', 'Pequim', 'SP', 'Luiz Miguel Nicolas', 'Ana Beatriz Valentina', NULL, 20, 'Isabela.Teixeira@emailescola.com', 'grao'),
-(62, 'Rodrigo Barbosa', '8a S?rie A', 17, 'Rua das Orqu?deas', '87878-989', 'Shibuya', 'Amsterd?', 'SP', 'Arthur Miguel Lucca', 'Helo?se Maya', NULL, 21, 'Rodrigo.Barbosa@emailescola.com', 'fruta'),
-(63, 'Sofia Reis', '8a S?rie A', 17, 'Rua do Mercado', '31313-535', 'Jardim Bot?nico', 'Viena', 'SP', 'Jo?o Vitor Lorenzo', 'Malu Maria J?lia', NULL, 22, 'Sofia.Reis@emailescola.com', 'verde'),
-(64, 'Leonardo Monteiro', '8a S?rie A', 17, 'Avenida Rio Branco', '53535-747', 'Vila Ol?mpia', 'Praga', 'SP', 'L?onovo Henrique', 'Melinda Aurora', NULL, 23, 'Leonardo.Monteiro@emailescola.com', 'sapato'),
-(65, 'Vanessa Correia', '8a S?rie A', 17, 'Rua da Liberdade', '75757-969', 'Little Italy', 'Estocolmo', 'SP', 'Gustavo Jo?o Miguel', 'Let?cia Lara', NULL, 24, 'Vanessa.Correia@emailescola.com', 'inverno'),
-(66, 'Eduardo Castro', '8a S?rie A', 17, 'Rua Santos Dumont', '97979-191', 'Baixa', 'Bruxelas', 'SP', 'Pedro Henriqu Rafael', 'Maria Valentina ', NULL, 25, 'Eduardo.Castro@emailescola.com', 'viagem'),
-(67, 'Fernanda Ramos', '8a S?rie A', 16, 'Avenida dos Bandeirantes', '14141-212', 'Bairro Alto', 'Cidade do M?xico', 'SP', 'Jo?o Lucas Henry', 'Maria Clara', NULL, 26, 'Fernanda.Ramos@emailescola.com', 'azul'),
-(68, 'Vin?cius Fonseca', '8a S?rie A', 17, 'Rua das Laranjeiras', '34343-434', 'Santa Catarina', 'Mil?o', 'SP', 'Emanuel Murilo', 'Chloe L?via', NULL, 27, 'Vinicius.Fonseca@emailescola.com', 'corais'),
-(69, 'Luana Duarte', '8a S?rie A', 17, 'Rua das Hort?nsias', '56565-656', 'Retiro', 'Vars?via', 'SP', 'Jo?o Levi', 'Maria Elisa Esther', NULL, 28, 'Luana.Duarte@emailescola.com', 'perla'),
-(70, 'Andr? Borges', '8a S?rie A', 17, 'Avenida Get?lio Vargas', '78787-878', 'Bellavista', 'Zurique', 'SP', 'Caleb Guilherme', 'Maria Helo?sa Giovanna', NULL, 29, 'Andre.Borges@emailescola.com', 'tempo'),
-(71, 'Carolina Antunes', '8a S?rie A', 17, 'Rua Dr. Silva', '19191-010', 'Recoleta', 'Atenas', 'SP', 'Davi Lucca Vicente', 'Maria Laura Sarah', NULL, 30, 'Carolina.Antunes@emailescola.com', 'selva'),
-(72, 'Mateus Vargas', '8a S?rie A', 17, 'Rua Bela Vista', '23232-323', 'Moema', 'Auckland', 'SP', 'Ant?nio Felipe', 'Maria Fernanda ', NULL, 31, 'Mateus.Vargas@emailescola.com', 'neve'),
-(73, 'Mariana Guimar?es', '8a S?rie A', 16, 'Rua Monte Alegre', '45454-545', 'Bairro G?tico', 'Bogot?', 'SP', 'Eduardo Bryan', 'Maria Cec?lia', NULL, 32, 'Mariana.Guimaraes@emailescola.com', 'laranja'),
-(74, 'Igor Menezes', '8a S?rie A', 17, 'Avenida do Contorno', '67676-767', 'Belleville', 'Cingapura', 'SP', 'Enrico Matteo', 'Ana Cec?lia Lorena', NULL, 33, 'Igor.Menezes@emailescola.com', 'alegria'),
-(75, 'Lu?sa Pires', '8a S?rie A', 17, 'Rua da Aurora', '89898-989', 'Almagro', 'Caracas', 'SP', 'Caio Bento', 'Hadassa Beatriz', NULL, 34, 'Luisa.Pires@emailescola.com', 'monte'),
-(76, 'Victor Almeida', '8a S?rie A', 17, 'Rua Dom Pedro', '12121-010', 'Vila Mariana', 'Casablanca', 'SP', 'Jos? Jo?o Pedro', 'Ana Vit?ria Rebeca', NULL, 35, 'Victor.Almeida@emailescola.com', 'pluma'),
-(77, 'Renata Farias', '8a S?rie A', 16, 'Avenida Presidente Vargas', '23232-123', 'Marais', 'Jerusal?m', 'SP', 'Enzo Gabriel Pietro', 'Diana Luna', NULL, 36, 'Renata.Farias@emailescola.com', 'sabor'),
-(78, 'Gabriel Azevedo', '8a S?rie A', 17, 'Rua Nossa Senhora', '34343-234', 'Pr?ncipe Real', 'Joanesburgo', 'SP', 'Augusto Leonardo', 'Ayla Sophia Ol?via', NULL, 37, 'Gabriel.Azevedo@emailescola.com', 'rede'),
-(79, 'Tatiana Moreira', '8a S?rie A', 17, 'Rua 7 de Setembro', '45454-345', 'Jardim Am?rica', 'Kuala Lumpur', 'SP', 'Mathias Daniel', 'Eduarda Maria Helena', NULL, 38, 'Tatiana.Moreira@emailescola.com', 'forno'),
-(80, 'Henrique Sousa', '8a S?rie A', 17, 'Alameda dos Girass?is', '56565-456', 'Flamengo', 'Lima', 'SP', '', 'Ana L?via Mariana', NULL, 39, 'Henrique.Sousa@emailescola.com', 'agua'),
-(81, 'Natalia Cardoso', '8a S?rie A', 17, 'Rua das Mangueiras', '67676-567', 'San Telmo', 'Manila', 'SP', '', 'Isabel Isadora', NULL, 40, 'Natalia.Cardoso@emailescola.com', 'cidade');
+(42, 'Lucas Almeida', '8a Serie A', 17, 'Rua das Flores', '12345-678', 'Soho', 'Paris', 'SP', 'Vitor Miguel', 'Alana Helena', 'foto_aluno_1.jpg', 1, 'Lucas.Almeida@emailescola.com', 'abacaxi'),
+(43, 'Clara Mendes', '8a Serie A', 16, 'Avenida Central', '98765-432', 'Harlem', 'Sydney', 'SP', 'Enzo Arthur', 'Rafaela Alice', NULL, 2, 'Clara.Mendes@emailescola.com', 'cachorro'),
+(44, 'Rafael Silva', '8a Serie A', 17, 'Rua do Comercio', '54321-098', 'Ipanema', 'Toquio', 'SP', 'Caue Gael', 'Vitoria Laura', NULL, 3, 'Rafael.Silva@emailescola.com', 'livro'),
+(45, 'Helena Costa', '8a Serie A', 17, 'Alameda dos Anjos', '11111-222', 'Montmartre', 'Roma', 'SP', 'Francisco Theo', 'Isabelly Maria Alice', NULL, 4, 'Helena.Costa@emailescola.com', 'sereno'),
+(46, 'Bruno Carvalho', '8a Serie A', 17, 'Avenida Paulista', '33333-444', 'Trastevere', 'Cairo', 'SP', 'Rael Heitor', 'Bella Sophia', NULL, 5, 'Bruno.Carvalho@emailescola.com', 'banana'),
+(47, 'Marina Oliveira', '8a Serie A', 17, 'Rua do Sol', '55555-666', 'Chelsea', 'Nova York', 'SP', 'Joao Guilherme Ravi', 'Milena Manuela', NULL, 6, 'Marina.Oliveira@emailescola.com', 'estrela'),
+(48, 'Diego Ferreira', '8a Serie A', 17, 'Rua Santa Clara', '77777-888', 'Leblon', 'Londres', 'SP', 'Thomas Davi', 'Clarice Maite', NULL, 7, 'Diego.Ferreira@emailescola.com', 'solidez'),
+(49, 'Beatriz Santos', '8a Série A', 16, 'Avenida Atlantica', '99999-000', 'La Boca', 'Berlim', 'SP', 'Yuri Bernardo', 'Mirella Liz', NULL, 8, 'Beatriz.Santos@emailescola.com', 'amigo'),
+(50, 'Felipe Souza', '8a Serie A', 17, 'Rua das Palmeiras', '10101-202', 'Copacabana', 'Dubai', 'SP', 'Yan Noah', 'Ana Cecilia', NULL, 9, 'Felipe.Souza@emailescola.com', 'segredo'),
+(51, 'Amanda Pereira', '8a Serie A', 17, 'Rua Nova', '30303-404', 'Notting Hill', 'Hong Kong', 'SP', 'Anthony Gabriel Gabr', 'Emilly Isabella', NULL, 10, 'Amanda.Pereira@emailescola.com', 'loucura'),
+(52, 'Daniel Ribeiro', '8a Serie A', 17, 'Avenida Independencia', '50505-606', 'Kreuzberg', 'Moscou', 'SP', 'Oliver Samuel', 'Betina Luisa', NULL, 11, 'Daniel.Ribeiro@emailescola.com', 'janela'),
+(53, 'Camila Lima', '8a Serie A', 17, 'Rua da Paz', '70707-808', 'La Defense', 'Sao Paulo', 'SP', 'Otavio Pedro', 'Mariah Eloa', NULL, 12, 'Camila.Lima@emailescola.com', 'peixe'),
+(54, 'Gustavo Rocha', '8a Serie A', 17, 'Alameda dos Ipes', '90909-010', 'Santa Teresa', 'Madri', 'SP', 'Joao Gabriel Anthony', 'Zoe Heloisa', NULL, 13, 'Gustavo.Rocha@emailescola.com', 'brilho'),
+(55, 'Julia Moreira', '8a Serie A', 16, 'Rua das Acacias', '12121-314', 'Palermo', 'Istambul', 'SP', 'Nathan Isaac', 'Maria Vitoria Julia', NULL, 14, 'Julia.Moreira@emailescola.com', 'rosas'),
+(56, 'Marcelo Nogueira', '8a Serie A', 17, 'Avenida das Nacoes', '41414-515', 'Ginza', 'Bangcoc', 'SP', 'Davi Lucas Benicio', 'Nicole Ayla', NULL, 15, 'Marcelo.Nogueira@emailescola.com', 'luzes'),
+(57, 'Larissa Fernandes', '8a Serie A', 17, 'Rua da Esperanca', '61616-717', 'Vila Madalena', 'Buenos Aires', 'SP', 'Vinicius Benjamin', 'Lais Maria', NULL, 16, 'Larissa.Fernandes@emailescola.com', 'primavera'),
+(58, 'Pedro Martins', '8a Serie A', 17, 'Rua Sao Joao', '81818-919', 'Chueca', 'Seul', 'SP', 'Theodoro Matheus', 'Melina Isis', NULL, 17, 'Pedro.Martins@emailescola.com', 'casa'),
+(59, 'Gabriela Andrade', '8a Serie A', 17, 'Avenida das Americas', '21212-323', 'Greenwich Village', 'Toronto', 'SP', 'Valentim Lucas', 'Bianca Elisa', NULL, 18, 'Gabriela.Andrade@emailescola.com', 'vento'),
+(60, 'Thiago Batista', '8a Serie A', 17, 'Rua do Carmo', '43434-545', 'Lapa', 'Lisboa', 'SP', 'Ryan Joaquim', 'Louise Antonella', NULL, 19, 'Thiago.Batista@emailescola.com', 'murilo'),
+(61, 'Isabela Teixeira', '8a Serie A', 16, 'Alameda dos Lirios', '65656-767', 'Malasaia', 'Pequim', 'SP', 'Luiz Miguel Nicolas', 'Ana Beatriz Valentina', NULL, 20, 'Isabela.Teixeira@emailescola.com', 'grao'),
+(62, 'Rodrigo Barbosa', '8a Serie A', 17, 'Rua das Orquideas', '87878-989', 'Shibuya', 'Amsterda', 'SP', 'Arthur Miguel Lucca', 'Heloise Maya', NULL, 21, 'Rodrigo.Barbosa@emailescola.com', 'fruta'),
+(63, 'Sofia Reis', '8a Serie A', 17, 'Rua do Mercado', '31313-535', 'Jardim Botanico', 'Viena', 'SP', 'Joao Vitor Lorenzo', 'Malu Maria Julia', NULL, 22, 'Sofia.Reis@emailescola.com', 'verde'),
+(64, 'Leonardo Monteiro', '8a Serie A', 17, 'Avenida Rio Branco', '53535-747', 'Vila Olimpia', 'Praga', 'SP', 'Leonovo Henrique', 'Melinda Aurora', NULL, 23, 'Leonardo.Monteiro@emailescola.com', 'sapato'),
+(65, 'Vanessa Correia', '8a Serie A', 17, 'Rua da Liberdade', '75757-969', 'Little Italy', 'Estocolmo', 'SP', 'Gustavo Joao Miguel', 'Leticia Lara', NULL, 24, 'Vanessa.Correia@emailescola.com', 'inverno'),
+(66, 'Eduardo Castro', '8a Serie A', 17, 'Rua Santos Dumont', '97979-191', 'Baixa', 'Bruxelas', 'SP', 'Pedro Henriqu Rafael', 'Maria Valentina ', NULL, 25, 'Eduardo.Castro@emailescola.com', 'viagem'),
+(67, 'Fernanda Ramos', '8a Serie A', 16, 'Avenida dos Bandeirantes', '14141-212', 'Bairro Alto', 'Cidade do Mexico', 'SP', 'Joao Lucas Henry', 'Maria Clara', NULL, 26, 'Fernanda.Ramos@emailescola.com', 'azul'),
+(68, 'Vinicius Fonseca', '8a Serie A', 17, 'Rua das Laranjeiras', '34343-434', 'Santa Catarina', 'Milao', 'SP', 'Emanuel Murilo', 'Chloe Livia', NULL, 27, 'Vinicius.Fonseca@emailescola.com', 'corais'),
+(69, 'Luana Duarte', '8a Serie A', 17, 'Rua das Hortensias', '56565-656', 'Retiro', 'Varsovia', 'SP', 'Joao Levi', 'Maria Elisa Esther', NULL, 28, 'Luana.Duarte@emailescola.com', 'perla'),
+(70, 'Andre Borges', '8a Serie A', 17, 'Avenida Getulio Vargas', '78787-878', 'Bellavista', 'Zurique', 'SP', 'Caleb Guilherme', 'Maria Heloisa Giovanna', NULL, 29, 'Andre.Borges@emailescola.com', 'tempo'),
+(71, 'Carolina Antunes', '8a Serie A', 17, 'Rua Dr. Silva', '19191-010', 'Recoleta', 'Atenas', 'SP', 'Davi Lucca Vicente', 'Maria Laura Sarah', NULL, 30, 'Carolina.Antunes@emailescola.com', 'selva'),
+(72, 'Mateus Vargas', '8a Serie A', 17, 'Rua Bela Vista', '23232-323', 'Moema', 'Auckland', 'SP', 'Antonio Felipe', 'Maria Fernanda ', NULL, 31, 'Mateus.Vargas@emailescola.com', 'neve'),
+(73, 'Mariana Guimaraes', '8a Serie A', 16, 'Rua Monte Alegre', '45454-545', 'Bairro Gotico', 'Bogota', 'SP', 'Eduardo Bryan', 'Maria Cecilia', NULL, 32, 'Mariana.Guimaraes@emailescola.com', 'laranja'),
+(74, 'Igor Menezes', '8a Serie A', 17, 'Avenida do Contorno', '67676-767', 'Belleville', 'Cingapura', 'SP', 'Enrico Matteo', 'Ana Cecilia Lorena', NULL, 33, 'Igor.Menezes@emailescola.com', 'alegria'),
+(75, 'Luisa Pires', '8a Serie A', 17, 'Rua da Aurora', '89898-989', 'Almagro', 'Caracas', 'SP', 'Caio Bento', 'Hadassa Beatriz', NULL, 34, 'Luisa.Pires@emailescola.com', 'monte'),
+(76, 'Victor Almeida', '8a Serie A', 17, 'Rua Dom Pedro', '12121-010', 'Vila Mariana', 'Casablanca', 'SP', 'Jose Joao Pedro', 'Ana Vitoria Rebeca', NULL, 35, 'Victor.Almeida@emailescola.com', 'pluma'),
+(77, 'Renata Farias', '8a Serie A', 16, 'Avenida Presidente Vargas', '23232-123', 'Marais', 'Jerusalem', 'SP', 'Enzo Gabriel Pietro', 'Diana Luna', NULL, 36, 'Renata.Farias@emailescola.com', 'sabor'),
+(78, 'Gabriel Azevedo', '8a Serie A', 17, 'Rua Nossa Senhora', '34343-234', 'Principe Real', 'Joanesburgo', 'SP', 'Augusto Leonardo', 'Ayla Sophia Olvia', NULL, 37, 'Gabriel.Azevedo@emailescola.com', 'rede'),
+(79, 'Tatiana Moreira', '8a Serie A', 17, 'Rua 7 de Setembro', '45454-345', 'Jardim America', 'Kuala Lumpur', 'SP', 'Mathias Daniel', 'Eduarda Maria Helena', NULL, 38, 'Tatiana.Moreira@emailescola.com', 'forno'),
+(80, 'Henrique Sousa', '8a Serie A', 17, 'Alameda dos Girassois', '56565-456', 'Flamengo', 'Lima', 'SP', '', 'Ana Livia Mariana', NULL, 39, 'Henrique.Sousa@emailescola.com', 'agua'),
+(81, 'Natalia Cardoso', '8a Serie A', 17, 'Rua das Mangueiras', '67676-567', 'San Telmo', 'Manila', 'SP', '', 'Isabel Isadora', NULL, 40, 'Natalia.Cardoso@emailescola.com', '1234');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `dados_professor`
+--
+
+CREATE TABLE `dados_professor` (
+  `id` int(11) NOT NULL,
+  `nome_completo` varchar(255) DEFAULT NULL,
+  `idade` int(11) DEFAULT NULL,
+  `endereco_rua` varchar(255) DEFAULT NULL,
+  `endereco_cep` varchar(20) DEFAULT NULL,
+  `endereco_bairro` varchar(100) DEFAULT NULL,
+  `endereco_cidade` varchar(100) DEFAULT NULL,
+  `endereco_estado` varchar(50) DEFAULT NULL,
+  `foto` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `senha` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `dados_professor`
+--
+
+INSERT INTO `dados_professor` (`id`, `nome_completo`, `idade`, `endereco_rua`, `endereco_cep`, `endereco_bairro`, `endereco_cidade`, `endereco_estado`, `foto`, `email`, `senha`) VALUES
+(1, 'Carlos Menezes', 50, 'Avenida Central', '98765-432', 'Harlem', 'Sydney', 'SP', 'NULL', 'Carlos_Menezes@professor.com', 'ProfessorCarlos'),
+(2, 'Ana Lucia Oliveira', 45, 'Rua do Comercio', '54321-098', 'Ipanema', 'Toquio', 'SP', 'NULL', 'Ana_Lucia_Oliveira@professor.com', 'ProfessoraAna'),
+(3, 'Joao Pedro Costa', 60, 'Alameda dos Anjos', '11111-222', 'Montmartre', 'Roma', 'SP', 'NULL', 'Joao_Pedro_Costa@professor.com', 'ProfessorJoao'),
+(4, 'Marina Silva', 30, 'Avenida Paulista', '33333-444', 'Trastevere', 'Cairo', 'SP', 'NULL', 'Marina_Silva@professor.com', 'ProfessoraMarina'),
+(5, 'Ricardo Almeida', 33, 'Rua do Sol', '55555-666', 'Chelsea', 'Nova York', 'SP', 'NULL', 'Ricardo_Almeida@professor.com', 'ProfessorRicardo'),
+(6, 'Beatriz Souza', 45, 'Rua Santa Clara', '77777-888', 'Leblon', 'Londres', 'SP', 'NULL', 'Beatriz_Souza@professor.com', 'ProfessoraBeatriz'),
+(7, 'Felipe Andrade', 44, 'Avenida Atlantica', '99999-000', 'La Boca', 'Berlim', 'SP', 'NULL', 'Felipe_Andrade@professor.com', 'ProfessorFelipe'),
+(8, 'Camila Ramos', 30, 'Rua das Palmeiras', '10101-202', 'Copacabana', 'Dubai', 'SP', 'NULL', 'Camila_Ramos@professor.com', 'ProfessoraCamila'),
+(9, 'Gustavo Fernandes', 30, 'Rua Nova', '30303-404', 'Notting Hill', 'Hong Kong', 'SP', 'NULL', 'Gustavo_Fernandes@professor.com', 'ProfessorGustavo');
 
 -- --------------------------------------------------------
 
@@ -111,17 +146,17 @@ CREATE TABLE `notas_faltas` (
 --
 
 INSERT INTO `notas_faltas` (`ID`, `aluno_id`, `bimestre`, `materia`, `nota`, `faltas`) VALUES
-(1492, 1, 1, 'Portugues', 5, 2),
-(1493, 1, 1, 'Ingles', 6, 2),
-(1494, 1, 1, 'Matematica', 8, 2),
-(1495, 1, 1, 'Historia', 7, 2),
-(1496, 1, 1, 'Ciencias', 6, 2),
+(1492, 1, 1, 'Portugues', 10, 0),
+(1493, 1, 1, 'Ingles', 99, 99),
+(1494, 1, 1, 'Matematica', 99, 99),
+(1495, 1, 1, 'Historia', 10, 2),
+(1496, 1, 1, 'Ciencias', 10, 2),
 (1497, 1, 1, 'Educacao Fisica', 10, 2),
-(1498, 1, 1, 'Artes', 7, 2),
+(1498, 1, 1, 'Artes', 10, 2),
 (1499, 1, 1, 'Geografia', 9, 2),
 (1500, 1, 1, 'Musica', 10, 2),
 (1501, 1, 2, 'Portugues', 5.5, 2),
-(1502, 1, 2, 'Ingles', 6.5, 2),
+(1502, 1, 2, 'Ingles', 99, 99),
 (1503, 1, 2, 'Matematica', 8.5, 2),
 (1504, 1, 2, 'Historia', 7.5, 2),
 (1505, 1, 2, 'Ciencias', 6.5, 2),
@@ -1515,15 +1550,15 @@ INSERT INTO `notas_faltas` (`ID`, `aluno_id`, `bimestre`, `materia`, `nota`, `fa
 (2893, 39, 4, 'Artes', 7, 2),
 (2894, 39, 4, 'Geografia', 9, 2),
 (2895, 39, 4, 'Musica', 10, 2),
-(2896, 40, 1, 'Portugues', 5, 2),
-(2897, 40, 1, 'Ingles', 6, 2),
-(2898, 40, 1, 'Matematica', 8, 2),
-(2899, 40, 1, 'Historia', 7, 2),
-(2900, 40, 1, 'Ciencias', 6, 2),
-(2901, 40, 1, 'Educacao Fisica', 10, 2),
-(2902, 40, 1, 'Artes', 7, 2),
+(2896, 40, 1, 'Portugues', 9, 20),
+(2897, 40, 1, 'Ingles', 9, 5),
+(2898, 40, 1, 'Matematica', 9, 2),
+(2899, 40, 1, 'Historia', 9, 2),
+(2900, 40, 1, 'Ciencias', 9, 2),
+(2901, 40, 1, 'Educacao Fisica', 9, 2),
+(2902, 40, 1, 'Artes', 9, 2),
 (2903, 40, 1, 'Geografia', 9, 2),
-(2904, 40, 1, 'Musica', 10, 2),
+(2904, 40, 1, 'Musica', 9, 2),
 (2905, 40, 2, 'Portugues', 5.5, 2),
 (2906, 40, 2, 'Ingles', 6.5, 2),
 (2907, 40, 2, 'Matematica', 8.5, 2),
@@ -1584,7 +1619,7 @@ ALTER TABLE `dados_aluno`
 -- AUTO_INCREMENT de tabela `notas_faltas`
 --
 ALTER TABLE `notas_faltas`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2932;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2934;
 
 --
 -- Restrições para tabelas despejadas
